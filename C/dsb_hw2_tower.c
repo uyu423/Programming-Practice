@@ -49,7 +49,7 @@ void printAllNodeInfo() {
 
 bool solve() {
 	if(!initNodes()) {
-		printf("init fucntion occur error.\n");
+		printf("init function occur error.\n");
 		return false;		
 	}
 	printAllNodeInfo();

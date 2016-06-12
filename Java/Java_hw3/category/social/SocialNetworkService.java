@@ -3,15 +3,15 @@ package category.social;
 import java.security.MessageDigest;
 
 public class SocialNetworkService {
-	/* ÇÊ¼ö Á¤º¸ ÇÊµå */
-	protected String serviceName;	//¼­ºñ½º ÀÌ¸§
-	protected boolean serviceLogin;	//¼­ºñ½º ·Î±×ÀÎ À¯¹«
-	private String userEmail;	//°èÁ¤ ÀÌ¸ÞÀÏ
-	private String userPasswd;	//°èÁ¤ ºñ¹Ð¹øÈ£
-	private String userName;	//»ç¿ëÀÚ ÀÌ¸§
-	/* Ãß°¡ Á¤º¸ ÇÊµå */
-	private String userPhone;	//»ç¿ëÀÚ ¿¬¶ôÃ³
-	private String userAddress;	//»ç¿ëÀÚ ÁÖ¼Ò
+	/* ï¿½Ê¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ */
+	protected String serviceName;	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
+	protected boolean serviceLogin;	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	private String userEmail;	//ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½
+	private String userPasswd;	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ð¹ï¿½È£
+	private String userName;	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
+	/* ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ */
+	private String userPhone;	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³
+	private String userAddress;	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½
 	
 	/* Constructor */
 	//Constructor Overloading
@@ -26,14 +26,14 @@ public class SocialNetworkService {
 		this.userName = userName;
 		this.userPhone = userPhone;
 		this.userAddress = userAddress;
-		this.serviceLogin = false;	//±âº» ·Î±×ÀÎ ¼³Á¤Àº false
+		this.serviceLogin = false;	//ï¿½âº» ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ false
 	}
 
 	/* Getter  && Setter */
 	public String getUserEmail() { return userEmail; }
 	public void setUserEmail(String userEmail) { this.userEmail = userEmail; }
 	public String getUserPasswd() { return userPasswd; }
-	public void setUserPasswd(String userPasswd) { this.userPasswd = sha(userPasswd); }	//ºñ¹Ð¹øÈ£ ¾ÏÈ£È­¸¦ sha·Î
+	public void setUserPasswd(String userPasswd) { this.userPasswd = sha(userPasswd); }	//ï¿½ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½È£È­ï¿½ï¿½ shaï¿½ï¿½
 	public String getUserName() { return userName; }
 	public void setUserName(String userName) { this.userName = userName; }
 	public String getUserPhone() { return userPhone; }
@@ -54,35 +54,35 @@ public class SocialNetworkService {
 		System.out.println("User Address : " + this.userAddress);
 	}
 	
-	/* ·Î±×ÀÎ ¸Þ¼­µå */
+	/* ï¿½Î±ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ */
 	public void serviceLogin(String userEmail, String userPasswd) {
 		if(this.serviceLogin == true) {
 			System.out.println("Login Failed : Already Login");
 			return;
 		}
 		else if(userEmail != this.userEmail) {
-			System.out.println("Login Failed : Diffrent Email");
+			System.out.println("Login Failed : Different Email");
 			return;
 		}
 		else if(this.userPasswd.equals(sha(userPasswd)) == false) {
-			System.out.println("Login Failed : Diffrent Password");
+			System.out.println("Login Failed : Different Password");
 			return;
 		}
 		else {
 			System.out.println(this.serviceName + " Service Login Success");
-			this.serviceLogin = true;	//·Î±×ÀÎ ¼º°ø
+			this.serviceLogin = true;	//ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			return;
 		}
 	}
 	
-	/* ·Î±×¾Æ¿ô ¸Þ¼­µå */
+	/* ï¿½Î±×¾Æ¿ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ */
 	public void serviceLogout() {
 		if(this.serviceLogin == false) {
 			System.out.println("Logout Failed : You Not Login");
 		}
 		else {
 			System.out.println(this.serviceName + " Service Logout Success");
-			this.serviceLogin = false;	//·Î±×¾Æ¿ô ¼º°ø
+			this.serviceLogin = false;	//ï¿½Î±×¾Æ¿ï¿½ ï¿½ï¿½ï¿½ï¿½
 			return;
 		}
 	}
