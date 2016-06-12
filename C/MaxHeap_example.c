@@ -2,7 +2,7 @@
  *	ProjectName	: MaxHeap Example C language
  *	Corder 		: YoWu (uyu423@gamil.com / http://luckyyowu.tistory.com)
  *	Organiz.	: Catholic Univ. of Korea
- *	Major		: Computer Science (Minor : Infomation System Eng)
+ *	Major		: Computer Science (Minor : Information System Eng)
  *	DateTime	: 2015.5.1 13:08
  *	Develop OS	: Kubuntu (Ubuntu KDE) 15.04 (Kernel 3.19.0-15-generic)
  *	PorgramLang	: C (Library Model : POSIX)

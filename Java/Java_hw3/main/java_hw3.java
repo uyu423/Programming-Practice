@@ -1,8 +1,8 @@
 /*
-*	ProjectName	: 2015-1 °´Ã¼ÁöÇâÇÁ·Î±×·¡¹Ö ¼³°è Homework 03
-*	Corder 		: À¯¿ë¿ì / 201021395
+*	ProjectName	: 2015-1 ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Homework 03
+*	Corder 		: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ / 201021395
 *	Organiz.	: Catholic Univ. of Korea
-*	Major		: Computer Science (Minor : Infomation System Eng)
+*	Major		: Computer Science (Minor : Information System Eng)
 *	DateTime	: 2015.06.10 22:40
 *	Develop OS	: Microsoft Windows 8.1 Embedded Industy Pro (x64)
 *	PorgramLang	: Java (Java1.8.0_45)
@@ -20,28 +20,28 @@ public class java_hw3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SocialNetworkService blogServ = new SocialNetworkService("Blog", "uyu423@gmail.com", "1q2w3e4r", "Yu Yongwoo");
-		blogServ.showServiceInfo();	//¼­ºñ½º Á¤º¸ Ç¥½Ã
+		blogServ.showServiceInfo();	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
 		System.out.println();
-		blogServ.serviceLogout();	//·Î±×¾Æ¿ô -> ·Î±×ÀÎ ÇÏÁö ¾Ê¾ÒÀ¸¹Ç·Î ½ÇÆÐ
-		blogServ.serviceLogin("uyu423@gmail.com", "1q2w3e4r");	//·Î±×ÀÎ -> ¼º°ø
-		blogServ.serviceLogout();	//·Î±×¾Æ¿ô -> ·Î±×ÀÎ ÇßÀ¸¹Ç·Î ¼º°ø
+		blogServ.serviceLogout();	//ï¿½Î±×¾Æ¿ï¿½ -> ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½
+		blogServ.serviceLogin("uyu423@gmail.com", "1q2w3e4r");	//ï¿½Î±ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½
+		blogServ.serviceLogout();	//ï¿½Î±×¾Æ¿ï¿½ -> ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½
 		System.out.println();
 		
 		Facebook fbServ = new Facebook("qkrrhdms@gmail.com", "qqqq", "Park Goeun", "010-4617-****", "Earth");
-		fbServ.showFacebookInfo();	//¼­ºñ½º Á¤º¸ Ç¥½Ã
+		fbServ.showFacebookInfo();	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
 		System.out.println();
-		fbServ.serviceLogin("qkrrhdms@gmail.com", "1q2w3e4r");	//·Î±×ÀÎ -> ºñ¹Ð¹øÈ£ Æ²·Á¼­ ½ÇÆÐ
-		fbServ.writePost("Hello World !");	//Æ÷½ºÆÃ -> ·Î±×ÀÎ ÇÏÁö ¾Ê¾ÒÀ¸¹Ç·Î ½ÇÆÐ
-		fbServ.serviceLogin("qkrrhdms@gmail.com", "qqqq");	//·Î±×ÀÎ -> ¼º°ø
-		fbServ.writePost("Hello World !");	//Æ÷½ºÆÃ -> ¼º°ø
+		fbServ.serviceLogin("qkrrhdms@gmail.com", "1q2w3e4r");	//ï¿½Î±ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½Ð¹ï¿½È£ Æ²ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		fbServ.writePost("Hello World !");	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -> ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½
+		fbServ.serviceLogin("qkrrhdms@gmail.com", "qqqq");	//ï¿½Î±ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½
+		fbServ.writePost("Hello World !");	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½
 		System.out.println();
-		fbServ.showFacebookInfo();	//¼­ºñ½º Á¤º¸ Ç¥½Ã -> Æ÷½ºÆÃ °ü·Ã º¯¼ö °ª º¯°æµÊ
+		fbServ.showFacebookInfo();	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		System.out.println();
-		fbServ.writePost();	//Æ÷½ºÆÃ -> ¼º°ø
+		fbServ.writePost();	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½
 		System.out.println();
-		fbServ.showFacebookInfo(); //¼­ºñ½º Á¤º¸ Ç¥½Ã -> Æ÷½ºÆÃ °ü·Ã º¯¼ö °ª º¯°æµÊ
+		fbServ.showFacebookInfo(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		System.out.println();
-		fbServ.serviceLogout(); //·Î±×¾Æ¿ô -> ¼º°ø
+		fbServ.serviceLogout(); //ï¿½Î±×¾Æ¿ï¿½ -> ï¿½ï¿½ï¿½ï¿½
 	}
 
 }
